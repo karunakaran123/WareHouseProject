@@ -21,7 +21,6 @@ import com.app.service.IUomService;
 @RestController
 @RequestMapping("/rest/uom")
 public class UomRestController {
-
 	@Autowired
 	private IUomService service;
 	
@@ -94,6 +93,8 @@ public class UomRestController {
 		{
 			message=new ResponseEntity<String>("uom "+id+" not found",HttpStatus.BAD_REQUEST);
 		}
+	
 		return message;
+	
 	}
 }
