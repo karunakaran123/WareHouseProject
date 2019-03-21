@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="ShipmentHome.jsp"%>
 <h2>ShipmentType Edit Page !..</h2>
 <form:form action="update" method="POST" modelAttribute="shipmentType">
 <pre>

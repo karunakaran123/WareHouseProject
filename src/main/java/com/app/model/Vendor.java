@@ -14,7 +14,7 @@ public class Vendor {
 	private String venName;
 	private String venCode;
 	private String venDesg;
-	private String venPreserve;
+	
 	public Vendor() {
 		super();
 	}
@@ -42,16 +42,11 @@ public class Vendor {
 	public void setVenDesg(String venDesg) {
 		this.venDesg = venDesg;
 	}
-	public String getVenPreserve() {
-		return venPreserve;
-	}
-	public void setVenPreserve(String venPreserve) {
-		this.venPreserve = venPreserve;
-	}
+	
 	@Override
 	public String toString() {
 		return "Vendor [venId=" + venId + ", venName=" + venName + ", venCode=" + venCode + ", venDesg=" + venDesg
-				+ ", venPreserve=" + venPreserve + "]";
+				;
 	}
 	
 }

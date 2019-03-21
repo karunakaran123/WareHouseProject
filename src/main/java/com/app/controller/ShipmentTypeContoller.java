@@ -2,6 +2,7 @@ package com.app.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -31,7 +32,11 @@ public class ShipmentTypeContoller {
 		map.addAttribute("shipmentType",new ShipmentType());
 		return "ShipmentTypeReg";
 	}
-	@RequestMapping("/insert")
+	@RequestMapping("/home")
+	public String showShipmentHome() {
+		return "ShipmentHome";
+	}
+	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String saveReg(@ModelAttribute ShipmentType shipmentType,Errors errors,ModelMap map) {
 		
 		validator.validate(shipmentType, errors);

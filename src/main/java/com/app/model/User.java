@@ -24,10 +24,13 @@ public class User {
 	@GenericGenerator(name="User_gen",strategy="increment")
 	@Column(name="uid")
 	private Integer userId;
+	
 	@Column(name="uname")
 	private String userName;
+	
 	@Column(name="uemail",unique=true)
 	private String userEmail; 
+	
 	@Column(name="upwd")
 	private String userPwd;
 	

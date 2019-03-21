@@ -17,49 +17,51 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 	 <%@include file="HomeMenu.jsp"%>
-	<div class="container">
+	<div class="container ">
 
 		<!-- card start -->
-		<div class="card">
+		<div class="card col-10">
 
 
 			<!-- card Header -->
-			<div class="card-header bg-light ">
-				<h2>WELCOME TO USER LOGIN PAGE</h2>
+			<div class="card-header  col-14 bg-warning content-center">
+				<center><h4>WELCOME TO USER LOGIN PAGE</h4></center>
 			</div>
 
 
 			<!-- card body -->
 			<div class="card-body">
-
-				<form action='<spring:url value="/signin"/>' method="POST">
+				
+				<form action='<spring:url value="/signin"/>' method="POST" >
 					<div class="form-group">
-						<label for="userName" class="control-label col-sm-4">USER ID</label>
-						<input type="text" id="userName" name="userName" Required="required" />
+						<label for="username" class="control-label text-left col-sm-3">USER ID  :</label>
+						<input type="text"  id="username" name="username" Required="required" />
 					</div>
 					<div class="form-group">
-						<label for="userPwd" class="control-label col-sm-4">PASSWORD</label>
-						<input type="password" id="password" name="passwor"	required="required" />
+						<label for="userPwd" class="control-label text-left col-sm-3"> PASSWORD :</label>
+						<input type="password"  id="password" name="password" required="required" />
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" />
+						<input type="submit" value="Login" class="btn btn-success"/> <input type="submit" value="Reset" class="btn btn-warning"/>
 					</div>
 					<input type="hidden" name="${_csrf.parameterName}"
 						value="${_csrf.token}" />
 				</form>
+				
 			</div>
 
 
 			<c:if test="${param.error}">
-				<div class="card-footer bg-danger text-white">Invalid Username
-					and password.</div>
+				<div class="card-footer bg-danger text-white">Invalid Username and password.</div>
 			</c:if>
 			<c:if test="${param.logout}">
-				<div class="card-footer bg-success text-white">You have been
-					logged out.</div>
+				<div class="card-footer bg-success text-white">You have been logged out.</div>
 			</c:if>
 		</div>
+		
 	</div>
+	</center>
 </body>
 </html>

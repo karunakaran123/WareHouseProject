@@ -16,6 +16,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="ShipmentHome.jsp"%>
 	<div class="container">
 		<div class="card">
 			<div class="card-header bg-primary">

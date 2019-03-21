@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.formLogin()
 		.loginPage("/login")
 		.loginProcessingUrl("/signin")
-		.defaultSuccessUrl("/uom/reg",true)
+		.defaultSuccessUrl("/home/home",true)
 		.failureUrl("/login?error=true")
 		.permitAll()
 
@@ -52,7 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 		;
 
-		// iam facing some problems for applying security
 	}
 
 

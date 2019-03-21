@@ -2,6 +2,7 @@ package com.app.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -39,13 +40,19 @@ public class PurchaseOrderController {
 	public String showPurchaseOrderReg(ModelMap map)
 	{
 		map.addAttribute("purchaseOrder",new PurchaseOrder());
-		List<ShipmentType> shipmentType=shipmentservice.getAllShipments();
-		map.addAttribute("shipmentType",shipmentType);
+		
+		List<ShipmentType> shipmenttype=shipmentservice.getAllShipments();
+		map.addAttribute("shipmenttype",shipmenttype);
 		
 		List<WhUserType> whuser=whservice.getWhUserTypesByType("vendor");
 		map.addAttribute("whuser",whuser);
 		
 		return "PurchaseOrderreg";
+	}
+	
+	@RequestMapping("/home")
+	public String showPurchaseHome() {
+		return "PurchaseHome";
 	}
 	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String savePurchaseOrderData(@ModelAttribute PurchaseOrder purchaseOrder,Errors errors,ModelMap map)
@@ -58,13 +65,13 @@ public class PurchaseOrderController {
 		map.addAttribute("message",msg);
 		map.addAttribute("purchaseOrder",new PurchaseOrder());
 		}
-		else {
+		/*else {
 			List<ShipmentType> shipmentType=shipmentservice.getAllShipments();
 			map.addAttribute("shipmentType",shipmentType);
 			
 			List<WhUserType> whuser=whservice.getWhUserTypesByType("vendor");
 			map.addAttribute("whuser",whuser);
-		}
+		}*/
 		return "PurchaseOrderreg";
 	}
 	@RequestMapping("/all")

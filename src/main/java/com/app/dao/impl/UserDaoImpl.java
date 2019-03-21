@@ -22,12 +22,12 @@ public class UserDaoImpl implements IUserDao {
 	}
 	
 	@Override
-	public User findByUserEmail(String userName) {
+	public User findByUserEmail(String username) {
 		User user=null;
 		
 		@SuppressWarnings("unchecked")
 		List<User> users=(List<User>) ht.findByCriteria(DetachedCriteria.forClass(User.class)
-				.add(Restrictions.eq("userEmail",userName)));
+				.add(Restrictions.eq("userEmail", username)));
 		if(users!=null && !users.isEmpty())
 		{
 			 user=users.get(0);

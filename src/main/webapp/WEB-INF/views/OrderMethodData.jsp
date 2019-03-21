@@ -16,9 +16,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="OrderHome.jsp"%>
 	<div class="container">
 		<div class="card">
-			<div class="card-header bg-info text-white">
+			<div class="card-header bg-warning text-white">
 				<h2>Order Method Data</h2>
 			</div>
 			<div class="card-body">

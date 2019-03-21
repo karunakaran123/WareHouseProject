@@ -64,6 +64,11 @@ public class ItemController {
 		
 		return "ItemReg";
 	}
+	@RequestMapping("/home")
+	public String showItemHome() {
+		
+		return "ItemHome";
+	}
 	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String insertData(@ModelAttribute Item item,Errors errors,ModelMap map){
 		

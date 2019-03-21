@@ -13,9 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="PurchaseHome.jsp"%>
 <div class="container">
 <div class="card">
-<div class="card-header">
+<div class="card-header bg-warning">
 <h2>PurchaseOrder Data!...</h2>
 </div>
 <div class="card-body">

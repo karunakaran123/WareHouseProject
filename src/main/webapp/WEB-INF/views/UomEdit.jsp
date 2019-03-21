@@ -17,6 +17,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="UomHome.jsp"%>
 	<div class="container">
 		<div class="card">
 			<div class="card-header bg-primary text-white">

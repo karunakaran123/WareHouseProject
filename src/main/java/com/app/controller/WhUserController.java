@@ -30,6 +30,10 @@ public class WhUserController {
 		map.addAttribute("whUserType", new WhUserType());
 		return "WhUserTypeReg";
 	}
+	@RequestMapping("/home")
+	public String showWhHome() {
+		return "WhUserHome";
+	}
 	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String saveWhUser(@ModelAttribute WhUserType whUserType,Errors errors,ModelMap map) {
 		validator.validate(whUserType, errors);

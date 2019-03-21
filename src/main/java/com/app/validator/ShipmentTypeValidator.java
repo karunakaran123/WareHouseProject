@@ -27,11 +27,11 @@ public class ShipmentTypeValidator implements Validator{
 		{
 			errors.rejectValue("code",null,"please enter shipment code");
 		}
-		if(st.getEnabled()==null||"".isEmpty())
+		if(st.getEnabled()==null||st.getEnabled().isEmpty())
 		{
 			errors.rejectValue("enabled",null,"please enable shipment ");
 		}
-		if(st.getGrade()==null||"".isEmpty())
+		if(st.getGrade()==null||"".equals(st.getGrade()))
 		{
 			errors.rejectValue("grade",null,"please select shipment grade");
 		}

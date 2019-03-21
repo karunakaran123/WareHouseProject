@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="ItemHome.jsp"%>
 <h2>Item Edit Page!...</h2>
 <form:form action="update" method="POST" modelAttribute="item">
 <pre>

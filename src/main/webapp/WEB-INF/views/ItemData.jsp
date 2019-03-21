@@ -16,9 +16,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="ItemHome.jsp"%>
 	<div class="container">
 		<div class="card">
-			<div class="card-header bg-primary">
+			<div class="card-header bg-warning">
 				<h2>Item Data!..</h2>
 			</div>
 			<c:choose>

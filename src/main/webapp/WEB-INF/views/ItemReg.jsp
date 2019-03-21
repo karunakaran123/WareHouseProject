@@ -17,23 +17,23 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="ItemHome.jsp"%>
 	<div class="container">
 	<div class="card">
-	<div class="card-header bg-primary">
+	<div class="card-header bg-warning">
 		<h2>Item Reg Page!...</h2>
 	</div>
 	<div class="card-body">
 		<form:form action="insert" method="POST" modelAttribute="item">
 			<div class="form-group">
-				<label for="Item Code" class="control-label col-sm-3">Item
-					Code</label>
+				<label for="Item Code" class="control-label col-sm-3">Item Code</label>
 				<form:input path="itemCode" />
 				<form:errors path="itemCode" cssClass="text-danger" />
 			</div>
 
 			<div class="form-group">
-				<label for="Item Diemention" class="control-label col-sm-3">Item
-					Diemention</label>: W
+				<label for="Item Diemention" class="control-label col-sm-3">Item Diemention</label>: 
+				W
 				<form:input path="width" size="5" />
 				L
 				<form:input path="length" size="5" />
@@ -42,8 +42,7 @@
 				<form:errors path="width" cssClass="text-danger" />
 			</div>
 			<div class="form-group">
-				<label for="Base Cost" class="control-label col-sm-3">Base
-					Cost</label>
+				<label for="Base Cost" class="control-label col-sm-3">Base Cost</label>
 				<form:input path="itemBaseCost" />
 				<form:errors path="itemBaseCost" cssClass="text-danger"/>
 			</div>

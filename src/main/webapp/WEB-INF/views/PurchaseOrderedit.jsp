@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="PurchaseHome.jsp"%>
 <h2>Purchase Order Reg</h2>
 <form:form action="update" method="POST" modelAttribute="purchaseOrder">
 <pre>

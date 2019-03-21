@@ -9,35 +9,35 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 <%@include file="HomeMenu.jsp"%>
-	<div class="container">
-		<div class="card">
-			<div class="card-header">
-				<h2>User Registration Page!...</h2>
+	<div class="container ">
+		<div class="card ">
+			<div class="card-header bg-info   content-center">
+				<center><h2>User Registration Page!...</h2></center>
 			</div>
 			<div class="card-body">
 				<form:form action="insert" method="POST" modelAttribute="user" cssClass="form">
 					<div class="form-group">
-						<label for="userName" class="control-label col-sm-3">UserName</label>
+						<label for="userName" class="control-label text-left col-sm-3">UserName  :</label>
 						<form:input path="userName" required="required" />
 						<form:errors path="userName" cssClass="text-danger" />
 					</div>
 					<div class="form-group">
-						<label for="userEmail" class="control-label col-sm-3">UserEmail</label>
+						<label for="userEmail" class="control-label text-left col-sm-3">UserEmail  :</label>
 						<form:input path="userEmail" required="required" />
 						<form:errors path="userEmail" cssClass="text-danger" />
 					</div>
 					<div class="form-group">
-						<label for="userPwd" class="control-label col-sm-3">UserPassward</label>
+						<label for="userPwd" class="control-label text-left col-sm-3">UserPassward  :</label>
 						<form:password path="userPwd" required="required" />
 						<form:errors path="userPwd" cssClass="text-danger" />
 					</div>
 					<div class="form-group">
-						<label for="roles" class="control-label col-sm-3">UserRoles</label>
-						<form:checkbox path="roles" value="admin" />
-						Admin
-						<form:checkbox path="roles" value="Emp" />
-						Employee
+						<label for="roles" class="control-label text-left col-sm-3">UserRoles  :</label>
+						<form:checkbox path="roles" value="admin" />Admin
+						
+						<form:checkbox path="roles" value="Emp" />Employee
 						<form:errors path="roles" cssClass="text-danger" />
 					</div>
 					<div class="from-group">
@@ -51,5 +51,6 @@
 			</c:if>
 		</div>
 	</div>
+	</center>
 </body>
 </html>

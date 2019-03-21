@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,6 +25,10 @@ public class VendorController {
 		map.addAttribute("vendor",new Vendor());
 		return "VendorReg";
 	}
+	@RequestMapping("/home")
+	public String showVenHome() {
+		return "VenHome";
+	}
 	@RequestMapping("/insert")
 	public String insertData(@ModelAttribute Vendor vendor,ModelMap map) {
 		Integer vId=service.saveVendor(vendor);
@@ -36,7 +41,7 @@ public class VendorController {
 	public String getAll(ModelMap map) {
 		List<Vendor> list=service.getAllVendors();
 		map.addAttribute("list",list);
-		return "VendorData";
+		return "VenData";
 	}
 	@RequestMapping("/edit")
 	public String showEdit(@RequestParam("id")Integer vId,ModelMap map) {
@@ -44,7 +49,7 @@ public class VendorController {
 		map.addAttribute("ven",ven);
 		return "VendorReg";
 	}
-	@RequestMapping("/update")
+	@RequestMapping(value="/update",method=RequestMethod.POST)
 	public String showUpdate(@ModelAttribute Vendor vendor,ModelMap map) {
 		service.updateVendor(vendor);
 		String msg=" Vendor "+vendor.getVenId()+" updated";

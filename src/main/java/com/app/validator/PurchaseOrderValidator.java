@@ -19,7 +19,7 @@ public class PurchaseOrderValidator implements Validator {
 		{
 			errors.rejectValue("orderCode",null,"please enter order code");
 		}
-		if(pr.getShipmentCode()==null || pr.getShipmentCode().getId()==null)
+		if(!(pr.getShipmentCode()==null))
 		{
 			errors.rejectValue("shipmentCode",null,"please choose one shipment code");
 		}

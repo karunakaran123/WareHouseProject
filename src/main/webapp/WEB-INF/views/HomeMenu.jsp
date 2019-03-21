@@ -10,9 +10,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
 	<!-- Brand -->
-	<a class="navbar-brand " href="#">Welcome to App Home Page!!</a>
+	<a class="navbar-brand text-light" href="#">Welcome to App Login Page!!</a>
 
 	<!-- Links -->
 	<ul class="navbar-nav">
@@ -23,14 +23,9 @@
       <a class="nav-link" href="#">Link 2</a>
     </li> -->
 
-		<li class="nav-item"><a class="nav-link" href="${url}/user/reg">Register </a></li>
-		<li class="nav-item"><a class="nav-link" href="${url}/login">Login</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="${url}/user/reg">Register </a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="${url}/login">Login</a></li>
 		
-		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-			href="#" id="navbardrop" data-toggle="dropdown">User Operations</a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="${url}/user/reg">Register </a> <a
-					class="dropdown-item" href="${url}/login">Login</a>
-			</div></li>
+		
 	</ul>
 </nav>

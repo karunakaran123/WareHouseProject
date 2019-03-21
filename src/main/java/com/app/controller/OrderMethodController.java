@@ -30,6 +30,11 @@ public class OrderMethodController {
 		map.addAttribute("orderMethod", new OrderMethod());
 		return "OrderMethodReg";
 	}
+	@RequestMapping("/home")
+	public String showOrderMethodHome() {
+		
+		return "OrderHome";
+	}
 	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String insertOrd(@ModelAttribute OrderMethod orderMethod,Errors errors,ModelMap map) {
 		

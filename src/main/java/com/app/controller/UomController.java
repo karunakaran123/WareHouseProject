@@ -39,6 +39,12 @@ public class UomController {
 		log.info("uom emty form displayed");
 		return "UomRegister";
 	}
+	
+	@RequestMapping("/home")
+	public String showUomHome(){
+		
+		return "UomHome";
+	}
 	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String insertUom(@ModelAttribute Uom uom,Errors errors,ModelMap map) {
 		log.info("entered into uomsave method ");

@@ -17,10 +17,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="UomHome.jsp"%>
 	<div class="container">
 		<div class="card">
-			<div class="card-header bg-primary text-white">
-				<h1>UOM Registration page!</h1>
+			<div class="card-header bg-warning">
+				<center><h1>UOM Registration page!</h1></center>
 			</div>
 
 			<div class="card-body">
@@ -50,8 +51,8 @@
 					</div>
 
 					<div class="from-group">
-						<input type="submit" value="Register" class="btn btn-success" /> <input
-							type="reset" value=" Reset " class="btn btn-warning" />
+						<input type="submit" value="Register" class="btn btn-success" /> 
+						<input type="reset" value=" Reset " class="btn btn-warning" />
 					</div>
 
 				</form:form>
